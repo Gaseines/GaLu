@@ -32,6 +32,10 @@ main{
     left: 150px;
 }
 
+.monograma_painel{
+    padding-bottom: 150px;
+}
+
 .borda_img{
     display: flex;
     align-items: center;
