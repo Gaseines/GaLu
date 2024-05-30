@@ -1,0 +1,128 @@
+main{
+    z-index: 0;
+}
+
+.painel_home{
+    height: 400px;
+
+    display: flex;
+    position: relative;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--bege);
+
+    color: var(--azul01);
+    
+}
+
+.img_container_painel{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -150px;
+
+    font-size: 1.5em;
+    padding-left: 50px;
+
+    position: absolute;
+    top: 270px;
+    left: 150px;
+}
+
+.borda_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--azul01);
+    height: 160px;
+    width: 160px;
+}
+
+.img_painel{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    
+}
+
+.nome_painel{
+    padding-left: 10px;
+}
+
+.versiculo{
+    font-family: 'padrao', sans-serif;
+    font-size: 1.5em;
+
+    position: absolute;
+    right: 5%;
+    top: 87%;
+}
+
+.caixinha{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--azul02);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22)28px 10px 10px;
+    justify-content: space-evenly;
+
+    border-radius: 0 0 40px 40px;
+    
+}
+
+.item{
+    background-color: var(--bege) ;
+    width: 200px;
+    height: 300px;
+    margin: 70px 10px 50px 10px;
+
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid var(--terraCota);
+
+}
+
+.item:hover{
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+
+    transition: 0.2s linear;
+}
+
+.item:hover .desc_item{
+    margin-top: 40px;
+    font-size: 1.3em;
+}
+
+.icon_item{
+    width: 70px;
+
+    margin-top: 40px;
+}
+
+.titulo_item{
+    margin-top: 20px;
+    color: var(--azul02);
+}
+
+.desc_item{
+    width: 180px;
+    margin-top: 20px;
+    color: var(--azul02);
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.lista_receitas:hover .lista_enxoval{
+    filter: blur(20px);
+}
+
+
