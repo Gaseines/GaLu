@@ -11,6 +11,10 @@
     src: url(../fonts/coolvetica\ rg.otf);
 }
 
+@font-face {
+    font-family: 'caligrafia';
+    src: url(../fonts/CamelliaSignatureDEMO!-DEMO!.ttf);
+}
 *{
     margin: 0;
     padding: 0;

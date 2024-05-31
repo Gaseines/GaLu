@@ -6,6 +6,12 @@ main{
     
 }
 
+.lista{
+    
+}
+
+
+
 ul{
     width: 700px;
 
@@ -16,8 +22,7 @@ ul{
     border: 1px solid var(--terraCota);
     border-radius: 10px;
     padding: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: auto;
     
 
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -27,6 +32,8 @@ ul{
     text-align: center;
     margin-bottom: 50px;
     letter-spacing: 3px;
+    font-family: 'caligrafia';
+
 
 }
 
@@ -35,4 +42,30 @@ ul{
     margin-bottom: 20px;
     letter-spacing: 3px;
     font-weight: normal;
+}
+
+.topicos_container{
+    display: flex;
+    
+}
+
+.topicos{
+    position: relative;
+    padding: 20px;
+    font-family: 'caligrafia';
+    cursor: pointer;
+}
+
+.line{
+    content: '';
+    background-color: var(--azul01);
+    height: 2px;
+    width: 40px;
+}
+
+.topicos:hover .line{
+    
+    width: 80px;
+
+    transition: 0.5s linear;
 }
