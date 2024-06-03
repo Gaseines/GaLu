@@ -2,15 +2,16 @@ header{
     height: 120px;
     display: flex;
     justify-content: center;
+    margin: auto;
     
 }
 
 nav{
     display: flex;
-    width: 93%;
+    width: 90%;
     height: 100px;
-    margin: auto;
-    justify-content: space-between;
+    
+    
     align-items: center;
     background-color: #e8ddcb9c;
     backdrop-filter: blur(10px);
@@ -67,4 +68,5 @@ nav{
     width: 90%;
     margin: auto;
 }
+
 
