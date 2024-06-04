@@ -29,7 +29,7 @@ body{
 
 #all{
     background-color: var(--bege);
-    margin: 30px;
+    margin: auto;
     width: 90%;
 
     border-radius: 40px;

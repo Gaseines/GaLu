@@ -74,6 +74,9 @@ main{
     cursor: pointer;
 
     opacity: 0;
+    display: none;
+
+    transition: 0.5s ease-out;
 }
 
 .linha{
@@ -100,8 +103,9 @@ ul{
 
     border: 1px solid var(--terraCota);
     border-radius: 10px;
-    padding: 50px;
+    padding: 50px 50px 10px 50px;
     margin: auto;
+    margin-bottom: 50px;
     
 
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -124,35 +128,24 @@ ul{
 }
 
 
-/*Animações---------------------------------------------------------------------*/
+/*listas---------------------------------------------------------------------*/
 
-.up_itens{
-    animation: up_itens 0.2s ease-out forwards;
+.cozinha{
+    display: block;
 }
 
-.down_itens{
-    animation: down_itens 1s ease-out forwards;
+.quarto{
+    display: none;
 }
 
-
-@keyframes up_itens{
-    0%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(-10px);
-        opacity: 0;
-    }
+.banheiro{
+    display: none;
 }
 
-@keyframes down_itens{
-    0%{
-        transform: translateY(-10px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0);
-        opacity: 1;
-    }
+.lavanderia{
+    display: none;
+}
+
+.sala{
+
 }

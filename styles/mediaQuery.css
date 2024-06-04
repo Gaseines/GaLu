@@ -1,0 +1,94 @@
+@media (max-width: 850px) {
+
+    /*Menu*/
+    nav{
+
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .nav_links_container{
+        display: flex;
+        height: 0px;
+        flex-direction: column;
+    }
+
+    .nav_link{
+        display: none;
+        opacity: 0;
+    }
+
+    .container_burguer{
+        display: block;
+    }
+
+    .burguer{
+        padding-right: 5px;
+    }
+
+    /*home*/
+
+    .painel_home{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 450px;
+    }
+
+    .monograma_painel{
+        
+        
+        padding-bottom: 0px;
+    }
+
+    .img_container_painel{
+        position: sticky;
+        padding-left: 0px;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 20px;
+        
+    }
+
+    .borda_img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .img_painel{
+        width: 110px;
+        height: 110px;
+    }
+
+    .versiculo{
+        margin-top: 20px;
+        position: static;
+    }
+
+    .caixinha{
+        padding-top: 50px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .item{
+        margin: 20px;
+    }
+
+    /*Listas*/
+
+    .topicos_container{
+        width: 60%;
+        align-items: center;
+        height: 500px;
+        flex-direction: column;
+        
+    }
+
+    ul{
+        width: 60%;
+    }
+
+    
+}
