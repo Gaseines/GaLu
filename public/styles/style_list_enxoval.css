@@ -1,12 +1,11 @@
-
-.mainEnxoval{
+.mainEnxoval {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-.container_menu_enxoval{
+.container_menu_enxoval {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,19 +15,19 @@
 
 }
 
-.btn_menu_enxoval{
+.btn_menu_enxoval {
     position: relative;
     text-align: center;
     padding: 10px;
     width: 50px;
     background-color: var(--azul01);
-    
+
     border-radius: 10px;
     margin-bottom: 10px;
     cursor: pointer;
 }
 
-.btn_menu_enxoval_down{
+.btn_menu_enxoval_down {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,19 +42,19 @@
     left: 33%;
 }
 
-.btn_menu_enxoval_down:hover{
+.btn_menu_enxoval_down:hover {
     cursor: pointer;
 
     top: 80%;
 }
 
-.btn_menu_enxoval:hover .btn_menu_enxoval_down{
+.btn_menu_enxoval:hover .btn_menu_enxoval_down {
     cursor: pointer;
 
     top: 80%;
 }
 
-.topicos_container{
+.topicos_container {
     height: 0px;
     display: flex;
     background-color: var(--azul01);
@@ -65,7 +64,7 @@
     transition: 0.5s ease-out;
 }
 
-.topicos{
+.topicos {
     font-size: 1.9em;
     position: relative;
     padding: 20px;
@@ -79,21 +78,21 @@
     transition: 0.5s ease-out;
 }
 
-.linha{
+.linha {
     content: '';
     background-color: var(--bege);
     height: 2px;
     width: 40px;
 }
 
-.topicos:hover .linha{
-    
+.topicos:hover .linha {
+
     width: 100%;
 
     transition: 0.5s ease-out;
 }
 
-ul{
+ul {
     width: 80%;
     max-width: 700px;
 
@@ -106,12 +105,12 @@ ul{
     padding: 50px 50px 10px 50px;
     margin: auto;
     margin-bottom: 50px;
-    
+
 
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
-.titlulo_lista{
+.titlulo_lista {
     text-align: center;
     margin-bottom: 50px;
     letter-spacing: 3px;
@@ -120,32 +119,58 @@ ul{
 
 }
 
-.itens{
+.headerListas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon_add {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 45px;
+}
+
+.icon_add:hover {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.itens {
     font-size: 1.3em;
     margin-bottom: 20px;
     letter-spacing: 3px;
     font-weight: normal;
 }
 
+.linha_item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon_edit{
+    padding: 5px;
+}
+
 
 /*listas---------------------------------------------------------------------*/
 
-.cozinha{
+.cozinha {
     display: block;
 }
 
-.quarto{
+.quarto {
     display: none;
 }
 
-.banheiro{
+.banheiro {
     display: none;
 }
 
-.lavanderia{
+.lavanderia {
     display: none;
 }
 
-.sala{
-
-}
+.sala {}

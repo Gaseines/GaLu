@@ -7,13 +7,13 @@
     <title>GaLu</title>
 
     <!--Styles-->
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/style_header.css">
-    <link rel="stylesheet" href="/styles/style_main.css">
-    <link rel="stylesheet" href="/styles/mediaQuery.css">
-    <link rel="stylesheet" href="/styles/animacoes.css">
-    <link rel="stylesheet" href="/styles/style_list_enxoval.css">
-    <link rel="stylesheet" href="/styles/style_add_enxoval.css">
+    <link rel="stylesheet" href="../public/styles/style.css">
+    <link rel="stylesheet" href="../public/styles/style_header.css">
+    <link rel="stylesheet" href="../public/styles/style_main.css">
+    <link rel="stylesheet" href="../public/styles/mediaQuery.css">
+    <link rel="stylesheet" href="../public/styles/animacoes.css">
+    <link rel="stylesheet" href="../public/styles/style_list_enxoval.css">
+    <link rel="stylesheet" href="../public/styles/style_add_enxoval.css">
 
     <!--Scripts-->
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
@@ -42,13 +42,24 @@
               
                 
         </header>
-        {{{body}}}
+        <main class="mainEnxoval">
+            <div class="container_add">
+                <form action="/edit/enxoval/cozinha/{{item.id}}">
+                    <h1>Editar item</h1>
+                    <div class="container_inputs_add">
+                        <p>Item</p>
+                        <input class="input_item" type="text" name="item" value="{{dataValues.item}}">
+                        <input class="btn_add" type="submit" value="Atualizar">
+                    </div>
+                </form>
+            </div>
+        </main>
+        
     </div>
     
     <script src="/scripts/script.js"></script>
     <script src="/scripts/scriptAbrirListas.js"></script>
     <script src="/scripts/menu.js"></script>
-    <script src="/scripts/enxovalMenu.js"></script>
 
     
 </body>

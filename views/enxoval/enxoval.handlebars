@@ -1,0 +1,65 @@
+<main class="mainEnxoval">
+            <div class="lista">
+                <div class="container_menu_enxoval">
+                    <div class="btn_menu_enxoval">
+                        <p>Opções</p>
+                        <div class="btn_menu_enxoval_down">
+                            <img class="img_down" src="../icons/seta_down.png">
+                        </div>
+                    </div>
+                    <div class="topicos_container">
+                        <h1 class="topicos btn_cozinha up_itens">Cozinha <div class="linha"></div>
+                        </h1>
+                        <h1 class="topicos btn_quarto up_itens">Quarto <div class="linha"></div>
+                        </h1>
+                        <h1 class="topicos btn_banheiro up_itens">Banheiro <div class="linha"></div>
+                        </h1>
+                        <h1 class="topicos btn_lavanderia up_itens">Lavanderia <div class="linha"></div>
+                        </h1>
+                        <h1 class="topicos btn_sala up_itens">Sala <div class="linha"></div>
+                        </h1>
+                    </div>
+                </div>
+<!--COZINHA-->
+                <ul class="cozinha">
+                    <div class="headerListas">
+                        <h1 class="titlulo_lista">Cozinha</h1>
+                        <a href="/cad/enxoval/cozinha"><img class="icon_add" src="/icons/icone_add.png" alt=""></a>
+                    </div>
+                    {{#each itensCozinha}}
+                        <div class="linha_item">
+                            <li class="itens">{{dataValues.item}}</li>
+                            <a href="/validEdit/enxoval/cozinha/{{dataValues.id}}" class="icon_edit"><img src="/icons/icone_edit.png"></a>
+                        </div>
+                    {{/each}}
+                </ul>
+<!--QUARTO-->
+                <ul class="quarto">
+                    <h1 class="titlulo_lista">Quarto</h1>
+                    <li class="itens">2 Fronhas (Estampado Verde)</li>
+                    <li class="itens">1 Lençol De Cima (Estampado)</li>
+                    <li class="itens">1 Edredom Microfibra Cinza</li>
+                    <li class="itens">2 Lençóis De Elástico (1 Estampado E 1 Branco De Malha)</li>
+                    <li class="itens">1 Cobre Leito Verde Metalacê</li>
+                    <li class="itens">1 Manta Microfibra Branca</li>
+                    <li class="itens">2 Travesseiros Baixos De Espuma</li>
+                    <li class="itens">1 Cobertor Cinza Claro</li>
+                </ul>
+<!--BANHEIRO-->
+                <ul class="banheiro">
+                    <h1 class="titlulo_lista">Banheiro</h1>
+                    <li class="itens">7 Toalhas De Rosto (1 Rosa, 1 Azul E 5 Brancas)</li>
+                    <li class="itens">5 Toalhas De Banho (2 Off White, 1 Creme Bordada, 2 Brancas)</li>
+                    <li class="itens">2 Tapetes De Banheiro Cor Verde</li>
+                    <li class="itens">1 Dispenser De Sabonete Líquido</li>
+                    <li class="itens">3 Tapetes De Banheiro De Bolinha (Cinza, Rosa, Verde)</li>
+                    <li class="itens">1 Porta Cotonete</li>
+                </ul>
+<!--LAVANDERIA-->
+                <ul class="lavanderia">
+                    <h1 class="titlulo_lista">Lavanderia</h1>
+                    <li class="itens">1 Dispenser de sabão em pó </li>
+                    <li class="itens">4 Panos de chão </li>
+                </ul>
+            </div>
+        </main>
