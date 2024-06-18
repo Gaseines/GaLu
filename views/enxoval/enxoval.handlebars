@@ -28,22 +28,23 @@
                     </div>
                     {{#each itensCozinha}}
                         <div class="linha_item">
-                            <li class="itens">{{dataValues.item}}</li>
-                            <a href="/edit/enxoval/cozinha/{{dataValues.id}}" class="icon_edit"><img src="/icons/icone_edit.png"></a>
+                            <li class="itens">{{this.item}}</li>
+                            <a href="/edit/enxoval/cozinha/{{this.id}}" class="icon_edit"><img src="/icons/icone_edit.png"></a>
                         </div>
                     {{/each}}
                 </ul>
 <!--QUARTO-->
                 <ul class="quarto">
-                    <h1 class="titlulo_lista">Quarto</h1>
-                    <li class="itens">2 Fronhas (Estampado Verde)</li>
-                    <li class="itens">1 Lençol De Cima (Estampado)</li>
-                    <li class="itens">1 Edredom Microfibra Cinza</li>
-                    <li class="itens">2 Lençóis De Elástico (1 Estampado E 1 Branco De Malha)</li>
-                    <li class="itens">1 Cobre Leito Verde Metalacê</li>
-                    <li class="itens">1 Manta Microfibra Branca</li>
-                    <li class="itens">2 Travesseiros Baixos De Espuma</li>
-                    <li class="itens">1 Cobertor Cinza Claro</li>
+                    <div class="headerListas">
+                        <h1 class="titlulo_lista">Quarto</h1>
+                        <a href="/cad/enxoval/quarto"><img class="icon_add" src="/icons/icone_add.png" alt=""></a>
+                    </div>
+                    {{#each itensQuarto}}
+                    <div class="linha_item">
+                        <li class="itens">{{this.item}}</li>
+                        <a href="/edit/enxoval/quarto/{{this.id}}" class="icon_edit"><img src="/icons/icone_edit.png"></a>
+                    </div>
+                    {{/each}}
                 </ul>
 <!--BANHEIRO-->
                 <ul class="banheiro">

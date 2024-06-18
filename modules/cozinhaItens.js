@@ -1,8 +1,7 @@
 const Sequelize = require('sequelize')
 const db = require('../db/connection')
-const sequelize = require('../db/connection')
 
-const CozinhaItens = sequelize.define('cozinha_itens', {
+const CozinhaItens = db.define('cozinha_itens', {
     item: Sequelize.TEXT
 })
 

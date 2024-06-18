@@ -4,7 +4,11 @@ const handlebars = require('express-handlebars');
 const path = require('path');
 const Sequelize = require('sequelize');
 const db = require('./db/connection');
+
 const CozinhaItens = require('./modules/cozinhaItens');
+const BanheiroItens = require('./modules/banheiroItens')
+const QuartoItens = require('./modules/quartoItens')
+
 const bodyParser = require('body-parser');
 
 const PORT = 7077;
@@ -40,13 +44,21 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-// Rota enxoval
+// Rota enxoval-----------------------------------------------
 app.get('/enxoval', (req, res) => {
-    CozinhaItens.findAll({ order: [['id', 'DESC']] })
-        .then((itensCozinha) => {
-            res.render('enxoval/enxoval', { itensCozinha: itensCozinha });
-        });
+    Promise.all([
+        CozinhaItens.findAll({order: [['id', 'DESC']]}),
+        QuartoItens.findAll({order: [['id', 'DESC']]})
+    ])
+    .then(([itensCozinha, itensQuarto]) => {
+        res.render('enxoval/enxoval', {itensCozinha, itensQuarto})
+    })
+    .catch(err => {
+        res.send(err)
+    })
 });
+//-----------------------------------------------------------
+//Rotas Cozinha----------------------------------------------
 
 // Rota cadastrar
 app.get('/cad/enxoval/cozinha', (req, res) => {
@@ -103,6 +115,74 @@ app.post('/edit/enxoval/cozinha/:id', (req, res) => {
 // Rota para deletar um item
 app.post('/delete/enxoval/cozinha/:id', (req, res) => {
     CozinhaItens.destroy({
+        where: { id: req.params.id }
+    })
+    .then(() => {
+        res.redirect('/enxoval');
+    })
+    .catch(err => {
+        res.status(500).send('Erro ao deletar o item');
+    });
+});
+//-------------------------------------------------------------------------
+
+//Rotas Quarto
+
+// Rota cadastrar
+app.get('/cad/enxoval/quarto', (req, res) => {
+    res.render('enxoval/cadEnxovalQuarto');
+});
+
+// Rota add
+app.post('/add/enxoval/quarto', (req, res) => {
+    QuartoItens.create({
+        item: req.body.item
+    })
+        .then(() => {
+            res.redirect('/enxoval');
+        })
+        .catch(err => {
+            res.send(err);
+        });
+});
+
+// Rota para editar um item
+app.get('/edit/enxoval/quarto/:id', (req, res) => {
+    QuartoItens.findByPk(req.params.id)
+        .then(itensQuarto => {
+            if (itensQuarto) {
+                console.log('Item encontrado:', itensQuarto);
+                res.render('enxoval/editEnxovalQuarto', { item: itensQuarto });
+            } else {
+                console.log('Item não encontrado');
+                res.send('Item não encontrado');
+            }
+        })
+        .catch(err => {
+            console.log('Erro ao buscar o item:', err);
+            res.status(500).send('Erro ao buscar o item');
+        });
+});
+
+// Rota para atualizar um item
+app.post('/edit/enxoval/quarto/:id', (req, res) => {
+    
+    QuartoItens.update(
+        { item: req.body.item },
+        { where: { id: req.params.id } }
+    )
+        .then(() => {
+            res.redirect('/enxoval');
+        })
+        .catch(err => {
+            console.log('Erro ao atualizar o item:', err);
+            res.status(500).send('Erro ao atualizar o item');
+        });
+});
+
+// Rota para deletar um item
+app.post('/delete/enxoval/quarto/:id', (req, res) => {
+    QuartoItens.destroy({
         where: { id: req.params.id }
     })
     .then(() => {
