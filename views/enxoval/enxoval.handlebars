@@ -21,7 +21,7 @@
                     </div>
                 </div>
 <!--COZINHA-->
-                <ul class="cozinha">
+                <ul id="cozinha" class="cozinha section">
                     <div class="headerListas">
                         <h1 class="titlulo_lista">Cozinha</h1>
                         <a href="/cad/enxoval/cozinha"><img class="icon_add" src="/icons/icone_add.png" alt=""></a>
@@ -34,7 +34,7 @@
                     {{/each}}
                 </ul>
 <!--QUARTO-->
-                <ul class="quarto">
+                <ul id="quarto" class="quarto section">
                     <div class="headerListas">
                         <h1 class="titlulo_lista">Quarto</h1>
                         <a href="/cad/enxoval/quarto"><img class="icon_add" src="/icons/icone_add.png" alt=""></a>
@@ -47,20 +47,46 @@
                     {{/each}}
                 </ul>
 <!--BANHEIRO-->
-                <ul class="banheiro">
-                    <h1 class="titlulo_lista">Banheiro</h1>
-                    <li class="itens">7 Toalhas De Rosto (1 Rosa, 1 Azul E 5 Brancas)</li>
-                    <li class="itens">5 Toalhas De Banho (2 Off White, 1 Creme Bordada, 2 Brancas)</li>
-                    <li class="itens">2 Tapetes De Banheiro Cor Verde</li>
-                    <li class="itens">1 Dispenser De Sabonete Líquido</li>
-                    <li class="itens">3 Tapetes De Banheiro De Bolinha (Cinza, Rosa, Verde)</li>
-                    <li class="itens">1 Porta Cotonete</li>
+                <ul id="banheiro" class="banheiro section">
+                    <div class="headerListas">
+                        <h1 class="titlulo_lista">Banheiro</h1>
+                        <a href="/cad/enxoval/banheiro"><img class="icon_add" src="/icons/icone_add.png" ></a>
+                    </div>
+                    {{#each itensBanheiro}}
+                        <div class="linha_item">
+                            <li class="itens">{{this.item}}</li>
+                            <a href="/edit/enxoval/banheiro/{{this.id}}" class="icon_edit"><img src="/icons/icone_edit.png" alt=""></a>
+                        </div>
+                    {{/each}}
+
+                    
+                    
                 </ul>
 <!--LAVANDERIA-->
-                <ul class="lavanderia">
-                    <h1 class="titlulo_lista">Lavanderia</h1>
-                    <li class="itens">1 Dispenser de sabão em pó </li>
-                    <li class="itens">4 Panos de chão </li>
+                <ul id="lavanderia" class="lavanderia section">
+                    <div class="headerListas">
+                        <h1 class="titlulo_lista">Lavanderia</h1>
+                        <a href="/cad/enxoval/lavanderia"><img class="icon_add" src="/icons/icone_add.png" ></a>
+                    </div>
+                    {{#each itensLavanderia}}
+                        <div class="linha_item">
+                            <li class="itens">{{this.item}}</li>
+                            <a href="/edit/enxoval/lavanderia/{{this.id}}" class="icon_edit"><img src="/icons/icone_edit.png" alt=""></a>
+                        </div>
+                    {{/each}}
+                </ul>
+<!--SALA-->
+                <ul id="sala" class="sala section">
+                    <div class="headerListas">
+                        <h1 class="titlulo_lista">Sala</h1>
+                        <a href="/cad/enxoval/sala"><img class="icon_add" src="/icons/icone_add.png" ></a>
+                    </div>
+                    {{#each itensSala}}
+                        <div class="linha_item">
+                            <li class="itens">{{this.item}}</li>
+                            <a href="/edit/enxoval/sala/{{this.id}}" class="icon_edit"><img src="/icons/icone_edit.png" alt=""></a>
+                        </div>
+                    {{/each}}
                 </ul>
             </div>
         </main>

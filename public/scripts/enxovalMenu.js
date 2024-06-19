@@ -67,27 +67,38 @@ linksListas.forEach(links => {
     const quarto = document.querySelector('.quarto')
     const banheiro = document.querySelector('.banheiro')
     const lavanderia = document.querySelector('.lavanderia')
+    const sala = document.querySelector('.sala')
     links.addEventListener('click', () => {
         if(links.classList.contains('btn_cozinha')){
             cozinha.style.display = 'block'
             quarto.style.display = 'none'
             banheiro.style.display = 'none'
             lavanderia.style.display = 'none'
+            sala.style.display = 'none'
         }else if(links.classList.contains('btn_quarto')){
             cozinha.style.display = 'none'
             quarto.style.display = 'block'
             banheiro.style.display = 'none'
             lavanderia.style.display = 'none'
+            sala.style.display = 'none'
         }else if(links.classList.contains('btn_banheiro')){
             cozinha.style.display = 'none'
             quarto.style.display = 'none'
             banheiro.style.display = 'block'
             lavanderia.style.display = 'none'
+            sala.style.display = 'none'
         }else if(links.classList.contains('btn_lavanderia')){
             cozinha.style.display = 'none'
             quarto.style.display = 'none'
             banheiro.style.display = 'none'
             lavanderia.style.display = 'block'
+            sala.style.display = 'none'
+        }else if(links.classList.contains('btn_sala')){
+            cozinha.style.display = 'none'
+            quarto.style.display = 'none'
+            banheiro.style.display = 'none'
+            lavanderia.style.display = 'none'
+            sala.style.display = 'block'
         }
     })
     

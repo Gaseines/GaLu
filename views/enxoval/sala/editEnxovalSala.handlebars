@@ -1,0 +1,13 @@
+<main class="mainEnxoval">
+    <div class="container_add">
+        <form action="/edit/enxoval/sala/{{item.id}}" method="post">
+            <h1 class="h1_add">Editar Item</h1>
+            <label class="p_add" for="item">Item:</label>
+            <input class="input_item" type="text" id="item" name="item" value="{{item.item}}">
+            <button class="btn_add" type="submit">Atualizar</button>
+        </form>
+        <form class="form_deletar" action="/delete/enxoval/sala/{{item.id}}" method="post">
+            <button class="btn_deletar" type="submit"><img src="/icons/icone_lixeira.png"></button>
+        </form>
+    </div>
+</main>
